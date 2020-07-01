@@ -41,5 +41,7 @@ command.
 
 * The search bar is not working properly because I have used ComponentDidUpdate and not ComponentDidMount which is creating problems. I will find a solution for that soon.
 
+* The UX is not that good and I will update the components to improve that by today or tommorow.
+
 
 
