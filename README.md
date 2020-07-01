@@ -39,7 +39,7 @@ $ yarn create react-app movie-app --template redux-typescript
 ``` 
 command.
 
-* The search bar is not working properly because I have used ComponentDidUpdate and not ComponentDidMount. I will find a solution for that soon.
+* The search bar is not working properly because I have used ComponentDidUpdate and not ComponentDidMount which is creating problems. I will find a solution for that soon.
 
 
 
