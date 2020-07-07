@@ -8,7 +8,7 @@ class MovieWall extends Component<custom>{
     return (
       <div>  
       <div className="photo-grid">
-        {this.props.posts[1].sort(function(x, y){return y.id - x.id;}).map((post:POST, i) => {
+        {this.props.posts[1].map((post:POST, i) => {
           return <Movie key={i} {...post} />
         })}
       </div>
@@ -18,3 +18,6 @@ class MovieWall extends Component<custom>{
 }
 
 export default MovieWall;
+
+
+//.sort(function(x, y){return y.id - x.id;})

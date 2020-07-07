@@ -1,5 +1,6 @@
 import {POST} from '../proptypes'
 
-let Posts: [string,POST[],string,string,string] = ['',[],'Top_Movies','','en-US'];
+let Posts: [string,POST[],string,string,string,boolean,number,boolean] = ['',[],'','','en-US',false,1,false];
 
-export default Posts
+
+export default Posts;

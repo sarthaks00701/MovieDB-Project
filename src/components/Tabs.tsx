@@ -6,12 +6,12 @@ class Tabs extends Component<custom> {
 
     handleSubmitMovies=() => {
         Posts[2] = 'Top_Movies';
-        this.props.giveTopMovies(this.props.posts[1]); 
+        this.props.giveTopMovies(); 
     }
 
     handleSubmitTV=() => {
         Posts[2] = 'Top_TV';
-        this.props.giveTopTV(this.props.posts[1]); 
+        this.props.giveTopTV(); 
     }
 
     render() {

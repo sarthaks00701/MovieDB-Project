@@ -6,6 +6,7 @@ export interface POST {
 
 export interface ACTION {
     type: string,
+    search_query: string,
     newposts: POST[],
     querytype: string,
     genre: string,
@@ -27,32 +28,22 @@ export interface movie {
     popularity: number,
     vote_count: number,
     video: boolean,
-    vote_average: number
+    vote_average: number,
+    original_name: string
 }
 
 export interface custom {
-    posts: [string,POST[],string,string,string],
-    searchPost: (newposts: POST[]) => {
-      type: string,
-      newposts: POST[],
+    posts: [string,POST[],string,string,string,boolean,number,boolean]
+    clear: () => {
+      type:string
     }
-    giveTopMovies: (newposts: POST[]) => {
-      type: string,
-      newposts: POST[]
+    searchPost: () => {
+      type: string
     }
-    giveTopTV: (newposts: POST[]) => {
-        type: string,
-        newposts: POST[]
+    giveTopMovies: () => {
+      type: string
     }
-    applyGenre: (newposts: POST[],genre: string,post_type:string) => {
-      type: string,
-      newposts: POST[],
-      genre:string
+    giveTopTV: () => {
+      type: string
     }
-    applyLanguage: (newposts: POST[],language: string,post_type:string) => {
-      type: string,
-      newposts: POST[],
-      language:string
-    }
-
   }

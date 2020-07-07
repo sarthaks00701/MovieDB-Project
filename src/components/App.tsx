@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import * as actionCreators from '../redux/actions'
 import { Dispatch } from 'redux';
 
-function mapStateToProps(state:[string,POST[],string,string,string]) {
+function mapStateToProps(state:[string,POST[],string,string,string,boolean,number,boolean]) {
     return {
         posts: state
     }

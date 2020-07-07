@@ -1,40 +1,23 @@
-import {POST} from '../proptypes'
-
-export function searchPost(newposts: POST[]) {
+export function clear () {
     return {
-        type: `SEARCH_POST`,
-        newposts: newposts
+        type: `CLEAR`
     }
 }
 
-export function giveTopMovies (newposts: POST[]) {
-    return {
-        type: `GIVE_TOP_MOVIES`,
-        newposts: newposts
+export function searchPost() {
+        return {
+        type: `SEARCH_POST_ASYNC`
     }
 }
 
-export function giveTopTV (newposts: POST[]) {
-    return {
-        type: `GIVE_TOP_TV`,
-        newposts: newposts
+export function giveTopMovies() {
+    return  {
+        type : `TOP_MOVIES_ASYNC`
     }
 }
 
-export function  applyGenre(newposts:POST[],post_type:string,genre:string) {
-    return {
-        type: `APPLY_GENRE`,
-        newposts: newposts,
-        genre: genre,
-        post_type: post_type
-    }
-}
-
-export function applyLanguage(newposts:POST[],post_type:string,language:string) {
-    return {
-        type: `APPLY_LANGUAGE`,
-        newposts: newposts,
-        language: language,
-        post_type: post_type
+export function giveTopTV() {
+    return  {
+        type : `TOP_TV_ASYNC`
     }
 }

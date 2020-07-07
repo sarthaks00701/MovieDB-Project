@@ -5,31 +5,42 @@ import Posts from '../data/Posts'
 
 export default class Filters extends Component<custom> {
 
-    handleGenreClick = (name:string,post_type:string=this.props.posts[2]) => {
+    handleGenreClick = (name:string) => {
         Posts[3] = name;
-        this.props.applyGenre(this.props.posts[1],post_type,name);
         if (Posts[2] === 'Top_Movies') {
-            this.props.giveTopMovies(this.props.posts[1]);
+            this.props.giveTopMovies();
         }
         else if (Posts[2] === 'Top_TV') {
-            this.props.giveTopTV(this.props.posts[1]);
+            this.props.giveTopTV();
         }
-        else {
-            this.props.searchPost(this.props.posts[1]);
+        else if (Posts[2] === 'search'){
+            this.props.searchPost();
         }
     }
 
-    handleLanguageClick = (name:string,post_type:string=this.props.posts[2]) => {
+    handleLanguageClick = (name:string) => {
         Posts[4] = name;
-        this.props.applyLanguage(this.props.posts[1],post_type,name);
         if (Posts[2] === 'Top_Movies') {
-            this.props.giveTopMovies(this.props.posts[1]);
+            this.props.giveTopMovies();
         }
         else if (Posts[2] === 'Top_TV') {
-            this.props.giveTopTV(this.props.posts[1]);
+            this.props.giveTopTV();
         }
-        else {
-            this.props.searchPost(this.props.posts[1]);
+        else if (Posts[2] === 'search'){
+            this.props.searchPost();
+        }
+    }
+
+    handleSort = () => {
+        Posts[7] = true;
+        if (Posts[2] === 'Top_Movies') {
+            this.props.giveTopMovies();
+        }
+        else if (Posts[2] === 'Top_TV') {
+            this.props.giveTopTV();
+        }
+        else if (Posts[2] === 'search'){
+            this.props.searchPost();
         }
     }
     // 
@@ -77,7 +88,7 @@ export default class Filters extends Component<custom> {
                 <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                <button id="0" name="Popularity">Popularity</button>
+                <button id="0" name="Popularity" onClick={() => this.handleSort()}>Popularity</button>
                 </div>
             </div>
 
